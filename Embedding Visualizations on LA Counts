@@ -1,0 +1,48 @@
+This posts showcases different embedding options available for stories:
+
+#### Embedding an Iframe from a resource view on the site
+
+This visualization comes from an existing resource on the site. Copy here the code available when clicking on the Embed button on the [resource page](https://lacounts-staging.l3.ckan.io/dataset/city-of-long-beach-flood-zones/resource/660babb6-51b3-484f-8ba3-95b97570e822).
+
+<iframe width="700" height="400" src="https://lacounts-staging.l3.ckan.io/dataset/city-of-long-beach-flood-zones/resource/660babb6-51b3-484f-8ba3-95b97570e822/view/1f24dd3c-08ac-48dd-b709-588f57cb35f1" frameBorder="0"></iframe>
+
+
+
+
+#### Embedding an external Iframe 
+
+This visualization comes from datausa.io
+
+<iframe frameborder="0" height="480px" src="https://embed.datausa.io/profile/geo/los-angeles-county-ca/economy/income_ethnicity?viz=True" width="720px"></iframe>
+
+
+
+#### Embedding Tableau visualizations
+
+Tableau visualizations require a bit more care, just because the embed code contains different tags and attributes. Make sure that there is no whitespace before the `<script>` tag, otherwise it will be rendered as pre-formatted code and not executed.
+
+So this is not going to work:
+
+     </object></div>                          <script type='text/javascript'> 
+
+But this is:
+
+    </object></div><script type='text/javascript'> 
+
+
+<div class='tableauPlaceholder' id='viz1544008792498' style='position: relative'>
+<noscript>
+  <a href='http:&#47;&#47;www.unitedwaysca.org'>
+	  <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RealCostMeasurebyCounties&#47;ofHouseholdsbelowRealCostMeasure&#47;1_rss.png' style='border: none' />
+</a></noscript><object class='tableauViz'  style='display:none;'>
+<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+<param name='embed_code_version' value='3' />
+<param name='site_root' value='' /><param name='name' value='RealCostMeasurebyCounties&#47;ofHouseholdsbelowRealCostMeasure' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RealCostMeasurebyCounties&#47;ofHouseholdsbelowRealCostMeasure&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showTabs' value='y' /></object></div><script type='text/javascript'>                    var divElement = document.getElementById('viz1544008792498');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
+
+
+
+#### Embedding YouTube videos
+
+Just copy the standard embed code:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qdUOH3GeqxY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
